@@ -1,225 +1,133 @@
-# Awesome-Virtual-Compute-Elastic-Processing
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Virtual Compute & Elastic Processing Banner" width="100%">
+</p>
 
-## Top Virtual Compute & Elastic Processing Ecosystem
+# ⚡ Awesome Virtual Compute & Elastic Processing 🚀
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Track Awesome List](https://img.shields.io/badge/list-awesome-blueviolet.svg?style=flat-square)](https://github.com/topics/awesome-list)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing?style=social)](https://github.com/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing/stargazers)
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Elastic Compute, Serverless Processing & Self-Hosted Orchestration*  
+> **Curated list of top SaaS products, enterprise platforms, and open-source GitHub frameworks for Virtual Compute, Elastic Infrastructure, Serverless Processing, and Distributed Cloud Orchestration.**
 
 **Last updated: October 2026**
 
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Virtual Compute & Elastic Processing**. These tools enable organizations to provision, scale, and orchestrate compute resources on demand—from virtual machines and containers to serverless functions and GPU clusters—matching capacity to workload without over-provisioning or manual intervention.
-
-
-
-**Examples** include Snowflake Compute Layer, AWS EC2, Google Cloud Compute Engine, Azure Virtual Machines, Databricks Serverless Compute, Ray on Anyscale, Modal, RunPod, Fly.io, and CoreWeave (the category leaders).
-
-
-
-**Open-source emphasis**: Virtual Compute & Elastic Processing is a domain where open-source tooling is **strong at the orchestration and serverless layers but requires assembly for full elastic infrastructure**. **Ray** (Apache 2.0, 41K+ GitHub stars, 500M+ downloads) is the foundational distributed compute engine for AI workloads, with native libraries for data processing and model training, and multi-cloud execution across AWS, GCP, Azure, Nebius, and CoreWeave . **Self-Hosted Serverless** provides a production-ready, Go-based FaaS alternative to AWS Lambda with WASM and Go plugin execution, API key auth, rate limiting, and built-in metrics . **OpenStack** and **Kubernetes** provide the infrastructure layer for building private clouds and container orchestration. However, **no open-source project replicates the turnkey elastic VM provisioning** of AWS EC2 or the per-second serverless GPU billing of Modal—those require provider infrastructure and billing systems that open-source cannot match.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Snowflake Compute Layer](https://www.snowflake.com/)**  
-
-  Separate compute layer with **Virtual Warehouses**—independent compute clusters for BI, ETL/ELT, and data science that can be sized independently (XS–XXL) and scaled out by adding clusters . **Adaptive Compute** (2026) pools compute across warehouses within an account, replacing 15+ configuration parameters with two and enabling query-level autoscaling while preserving workload isolation . The defining separation of storage and compute that became the cloud data warehouse standard.
-
-
-
-- **[AWS EC2](https://aws.amazon.com/ec2/)**  
-
-  The broadest virtual compute catalog—500+ instance types across general-purpose (T/M), compute-optimized (C), memory-optimized (R/X), and accelerated computing (Inf/P/G) families, with bare metal options and the Nitro hypervisor . Elastic scaling via Auto Scaling groups, spot instances for cost optimization, and global regional availability.
-
-
-
-- **[Google Cloud Compute Engine](https://cloud.google.com/compute)**  
-
-  VM families spanning general-purpose (C4A, E2, N-series), compute-optimized, memory-optimized, and accelerator-optimized (A3, G2) . Features live migration, custom machine types, sustained-use discounts, and committed-use contracts for predictable workloads.
-
-
-
-- **[Azure Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines)**  
-
-  Extensive VM portfolio with general-purpose, compute-optimized, memory-optimized, and GPU series; **lifecycle management** includes retirement schedules for older families (Dv3/Dsv3 announced for 2029, F-series for 2028) and capacity growth restrictions on legacy series, with modernization guidance provided . Hybrid benefits via Azure Arc and reserved instances.
-
-
-
-- **[Databricks Serverless Compute](https://www.databricks.com/)**  
-
-  Fully managed serverless compute for notebooks, workflows, and SQL; eliminates cluster provisioning and tuning, with per-second billing and automatic scaling. Recent releases add **ANSI SQL/PSM procedural scripting**, table/view default collation, and H3 geospatial functions . Integrated with Delta Lake and Unity Catalog for governance.
-
-
-
-- **[Ray on Anyscale](https://www.anyscale.com/)**  
-
-  Managed Ray platform from the creators of Ray; powers **distributed model training, multimodal data curation, batch embedding generation, and post-training** (SkyRL, veRL) across GPU clusters . Features pooled GPUs across clouds, multi-cloud execution (AWS, GCP, Azure, Nebius, CoreWeave), fine-grained hardware allocation, and enterprise governance (SSO, SAML, SCIM, audit logs).
-
-
-
-- **[Modal](https://modal.com/)**  
-
-  True **serverless compute** for Python functions and containers on GPUs, billed **per second** with scale-to-zero and fast cold starts . Strong Python-native developer experience with environment defined in code. Pricing (per GPU-hour, verified September 2026): B200 $6.25, H200 $4.54, H100 $3.95, A100 80GB $2.50, L40S $1.95 . Best for bursty, stateless workloads rather than long-running SSH sessions.
-
-
-
-- **[RunPod](https://www.runpod.io/)**  
-
-  GPU cloud with on-demand and spot pricing across B300 ($8.99/hr, 288GB VRAM), H200 SXM ($5.29/hr), A100 SXM ($1.79/hr, 80GB), L40S ($1.09/hr), and RTX PRO series . Supports serverless GPU inference, pods, and network volumes for persistent storage.
-
-
-
-- **[Fly.io](https://fly.io/)**  
-
-  Elastic compute platform for running apps close to users with **Firecracker microVMs** and global regions; pricing is usage-based with shared-cpu-1x 256MB at **$2.19/month** continuous runtime and no free tier (2-hour trial) . Features automatic scaling, Anycast networking, and persistent volumes.
-
-
-
-- **[CoreWeave](https://www.coreweave.com/)**  
-
-  AI-first GPU cloud; **first provider with generally available NVIDIA GB200 NVL72 instances**—72 Blackwell GPUs and 36 Grace CPUs in a liquid-cooled rack with 400Gb/s InfiniBand per GPU via Quantum-2 and BlueField-3 DPUs . Claims up to 30x faster LLM inference and 25x lower TCO for real-time inference vs. previous generations. Available as bare-metal via CoreWeave Kubernetes Service (CKS).
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Distributed Compute Engines
-
-
-
-- **[Ray](https://github.com/ray-project/ray)**  
-
-  The foundational open-source **distributed AI compute engine** (Apache 2.0, 41K+ GitHub stars, 500M+ downloads) . Simple Python APIs to execute functions and classes on a distributed cluster with a single decorator; **fine-grained hardware allocation** (CPUs, GPUs, TPUs, accelerator racks); in-memory distributed object store; native libraries for **Ray Data** (data processing) and **Ray Train** (distributed training); ecosystem including vLLM, SGLang, and SkyRL. **The standard for scaling Python AI workloads** from a laptop to thousands of nodes—but it is an orchestration layer, not a managed service.
-
-
-
-### Serverless / FaaS Platforms (Self-Hosted)
-
-
-
-- **[Self-Hosted Serverless](https://github.com/mstgnz/self-hosted-serverless)**  
-
-  Production-ready, self-hostable **FaaS alternative to AWS Lambda and Google Cloud Functions** (Go, v1.1.0) . Functions run as **Go plugins or WASM modules** (WASI-compatible via wazero) with compiled module caching for fast cold starts; dual HTTP and gRPC support; PostgreSQL/SQLite/Redis integration; event bus for function-to-function pub/sub; API key authentication; per-IP rate limiting; configurable function timeout with goroutine enforcement; panic recovery; and built-in metrics (execution count, duration, error rate, cold start count). Docker and Docker Compose deployment. **The strongest open-source FaaS foundation for teams wanting Lambda-like execution on their own infrastructure**.
-
-
-
-- **[OpenFaaS](https://github.com/openfaas/faas)**  
-
-  Kubernetes-native serverless framework for deploying functions and microservices as containers; popular for self-hosted serverless with Docker/K8s; supports multiple languages and auto-scaling.
-
-
-
-- **[Fission](https://github.com/fission/fission)**  
-
-  Kubernetes-native serverless framework with **~100ms cold starts** via warm container pools; supports NodeJS, Python, Ruby, Go, PHP, Bash, and any Linux executable; HTTP, message queue, and schedule triggers.
-
-
-
-- **[Knative](https://github.com/knative/serving)**  
-
-  Kubernetes-based platform for deploying and managing serverless workloads; provides request-driven autoscaling (including scale-to-zero), traffic splitting, and eventing; the foundation for many managed serverless offerings.
-
-
-
-### Infrastructure & Orchestration
-
-
-
-- **[OpenStack](https://github.com/openstack)**  
-
-  Open-source cloud computing platform for building **private and public IaaS clouds**; components include Nova (compute), Neutron (networking), Cinder (block storage), Swift (object storage), and Glance (images). **The most complete open-source EC2 equivalent**—but requires significant operational expertise to deploy and maintain.
-
-
-
-- **[Kubernetes](https://github.com/kubernetes/kubernetes)**  
-
-  The de facto container orchestration platform; provides scheduling, auto-scaling (HPA/VPA/Cluster Autoscaler), self-healing, and service discovery. The foundation for running containerized elastic workloads on any infrastructure.
-
-
-
-- **[KubeVirt](https://github.com/kubevirt/kubevirt)**  
-
-  Kubernetes add-on for running **virtual machines alongside containers**; enables VM workloads with Kubernetes orchestration, live migration, and elastic scaling—a path to VM elasticity without a full OpenStack deployment.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Apache CloudStack** — Open-source IaaS platform for building public and private clouds; simpler than OpenStack with a single management server; supports VMware, KVM, and XenServer hypervisors.
-
-- **Proxmox VE** — Open-source virtualization platform combining KVM and LXC; web-based management, clustering, HA, and backup; widely used for private cloud and edge compute.
-
-- **Nomad (HashiCorp)** — Open-source workload orchestrator for containers, VMs, and batch jobs; simpler than Kubernetes for non-container workloads; supports multi-region and multi-cloud scheduling.
-
-
-
-**Frameworks for building custom systems**: For **distributed AI compute**, Ray provides the most complete open-source foundation with native data and training libraries . For **self-hosted serverless**, Self-Hosted Serverless offers a production-ready Go-based FaaS with WASM and metrics , while OpenFaaS and Fission provide Kubernetes-native alternatives. For **private cloud IaaS**, OpenStack or CloudStack provide the VM provisioning layer, with KubeVirt bridging VMs and containers on Kubernetes. No open-source project matches the **managed elasticity and per-second billing** of AWS EC2, Modal, or Databricks Serverless—those require provider infrastructure and billing systems.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Virtual compute platforms handling workloads and data must comply with applicable security policies and data governance requirements; **GPU and high-performance compute resources are expensive and can generate significant costs if left unmonitored**—implement budget alerts and auto-shutdown policies.
-
-- **Open-source virtual compute is strongest at the orchestration and serverless layers**—Ray provides distributed AI compute , and Self-Hosted Serverless provides a production-ready FaaS . However, **no open-source project replicates the turnkey VM elasticity and per-second billing** of AWS EC2, Google Compute Engine, or Modal. Organizations requiring managed elastic compute should evaluate commercial platforms; those building private clouds should assess OpenStack/Kubernetes operational overhead carefully.
-
-- Verify license terms for commercial use; Ray uses Apache 2.0 , Self-Hosted Serverless is open-source (check repository) , and OpenStack components use Apache 2.0.
-
-
+---
+
+## 📑 Table of Contents
+- [📌 Overview & SEO Keywords](#-overview--seo-keywords)
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Managed Cloud Compute Platforms](#-saas--managed-cloud-compute-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [Distributed Compute & Processing Engines](#1-distributed-compute--processing-engines)
+  - [Serverless & FaaS Frameworks](#2-serverless--faas-frameworks)
+  - [Container & Workload Orchestrators](#3-container--workload-orchestrators)
+  - [Cloud Infrastructure, MicroVMs & Virtualization](#4-cloud-infrastructure-microvms--virtualization)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer](#-disclaimer)
 
 ---
 
+## 📌 Overview & SEO Keywords
 
+**Virtual Compute & Elastic Processing** encompasses modern infrastructure technologies that dynamically provision, scale, orchestrate, and de-provision computing capacity (virtual machines, microVMs, serverless containers, GPUs, and TPUs) in real time to match fluctuating workload demands.
 
-**Made for platform engineers, cloud architects, AI infrastructure teams, and DevOps practitioners.**  
+**Target Topics & Keywords:**  
+`elastic compute`, `virtual machines`, `serverless faas`, `gpu cloud`, `distributed computing`, `cloud infrastructure`, `container orchestration`, `kubernetes`, `microvms`, `autoscaling`, `firecracker`, `iaas`, `batch processing`, `cloud data warehouse`.
 
-Let's make virtual compute more open, but with clear eyes about the managed elasticity and billing infrastructure that commercial providers still own.
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global cloud virtual compute and elastic processing market is estimated at **$130+ Billion in 2026** (projected to exceed $300 Billion by 2030, representing a CAGR of ~18–22%), heavily propelled by generative AI training, bursty LLM inference, and serverless data transformation.
+
+The sector exhibits **moderate concentration with a bifurcated dynamic**:
+- **Commodity & General-Purpose Compute**: Highly concentrated around hyperscalers (AWS, Microsoft Azure, Google Cloud) operating as an oligopoly with deep enterprise ecosystems, sustained reserved instances, and global backbone networks.
+- **AI/GPU & Specialized Serverless Compute**: Moderately fragmented and intensely competitive, with emerging high-performance GPU clouds (CoreWeave, RunPod, Lambda) and developer-first serverless compute platforms (Modal, Fly.io, Anyscale) capturing substantial market share through per-second scale-to-zero economics and rapid hardware iteration.
+
+---
+
+## 🏢 SaaS & Managed Cloud Compute Platforms
+
+The table below is sorted by **Company Size / Valuation (Descending)**:
+
+| Platform 🌐 | Company Size / Valuation 📈 | Starting Tier Pricing 💵 | Free Tier Limit / Trial 🎁 | Description & Core Strengths 💡 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[AWS EC2](https://aws.amazon.com/ec2/)** | **~$2.1T+** (Amazon Market Cap; AWS ARR >$105B) | **$0.0042/hr** (`t4g.nano`, 2 vCPUs, 0.5 GB RAM) | **750 hours/month** of `t2.micro` or `t3.micro` for 12 months on AWS Free Tier | Global hyperscaler standard with 500+ instance families, Nitro hypervisor, spot pricing, and Auto Scaling groups. |
+| **[Azure Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines)** | **~$3.1T+** (Microsoft Market Cap; Cloud ARR >$130B) | **$0.0052/hr** (`B1ls`, 1 vCPU, 0.5 GB RAM) | **750 hours/month** of `B1s` VMs for 12 months plus **$200 credit** (30-day trial) | Deep enterprise hybrid cloud integration with Azure Arc, extended lifecycle modernization paths, and reserved instances. |
+| **[Google Cloud Compute Engine](https://cloud.google.com/compute)** | **~$2.2T+** (Alphabet Market Cap; GCP ARR >$40B) | **$0.0075/hr** (`e2-micro`, 2 vCPUs, 1 GB RAM) | **1 free non-preemptible `e2-micro` VM/month** (US regions) forever plus **$300 credit** (90-day trial) | Live migration, custom machine types, sustained-use discounts, and premier TPU/GPU accelerators. |
+| **[Snowflake Compute Layer](https://www.snowflake.com/)** | **~$45B - $55B** (Public NYSE: SNOW; ARR >$3.5B) | **$2.00/credit** (Standard Edition; XS Virtual Warehouse consumes 1 credit/hr) | **30-day free trial with $400 worth** of usage credits | Decoupled compute with Virtual Warehouses (XS–XXL) and Adaptive Compute pooling for query-level autoscaling. |
+| **[Databricks Serverless Compute](https://www.databricks.com/)** | **~$43B** (Private Valuation; ARR >$2.6B) | **$0.07/DBU** (Jobs compute tier; Serverless SQL starting at ~$0.22/DBU) | **14-day free trial** with full platform capabilities (cloud infrastructure billed via customer AWS/Azure/GCP account) | Managed serverless compute for Apache Spark notebooks, Delta Lake, workflows, and ANSI SQL procedural scripting. |
+| **[CoreWeave](https://www.coreweave.com/)** | **~$23B** (Valuation, 2024–2026; ARR >$2B) | **$0.22/hr** (CPU instances) / **$2.20/hr** (NVIDIA A100 80GB) | **No free tier**; enterprise trial credits available upon sales consultation and verification | AI-native GPU cloud featuring first GA NVIDIA GB200 NVL72 liquid-cooled racks, 400Gb/s InfiniBand, and bare-metal Kubernetes. |
+| **[Ray on Anyscale](https://www.anyscale.com/)** | **~$1B** (Private Valuation; raised $250M+) | **$0.0028/core-hr** ($1.00/Anyscale Cloud Unit - ACU) + pass-through cloud instance costs | **$50 free compute credits** upon registration for new accounts | Managed Ray platform powering distributed model training, batch embedding generation, and post-training (SkyRL, veRL). |
+| **[Modal](https://modal.com/)** | **~$500M+** (Valuation, Series A/B; raised $41M+) | **$0.000015/core-sec** ($0.054/CPU-hr) / **$1.95/hr** (NVIDIA L40S) / **$3.95/hr** (H100) | **$30/month free tier credits** recurring every month for personal accounts | Serverless Python container platform with scale-to-zero, per-second billing, sub-second cold starts, and zero infra setup. |
+| **[Fly.io](https://fly.io/)** | **~$300M+** (Private Valuation; Series C) | **$0.0000008/sec** ($2.19/month continuous for `shared-cpu-1x` 256MB) | **2-hour trial** for newly deployed microVMs; no recurring free plan | Edge-native elastic compute orchestrating Firecracker microVMs across 35+ global regions with Anycast routing. |
+| **[RunPod](https://www.runpod.io/)** | **~$150M - $250M** (Series A; raised $20M+) | **$0.20/hr** (Community Cloud GPUs) / **$1.09/hr** (Secure Cloud L40S) | **No free tier**; $5 initial test credits occasionally provided during promotion campaigns | Developer-first GPU cloud offering on-demand and spot pricing, serverless GPU inference endpoints, and persistent network storage. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Curated list of leading open-source compute frameworks and distributed engines, **sorted strictly by GitHub Stars (Descending)**:
+
+### 1. Distributed Compute & Processing Engines
+
+| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| :--- | :--- | :--- |
+| **[Apache Spark](https://github.com/apache/spark)** | [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) | Unified analytics engine for large-scale distributed data processing, streaming, SQL, and machine learning pipelines. |
+| **[Ray](https://github.com/ray-project/ray)** | [![Stars](https://img.shields.io/github/stars/ray-project/ray?style=social&color=white)](https://github.com/ray-project/ray/stargazers) | Universal distributed compute engine for scaling Python, AI training, and fine-grained hardware scheduling across CPUs/GPUs/TPUs. |
+| **[vLLM](https://github.com/vllm-project/vllm)** | [![Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers) | High-throughput, low-latency distributed LLM serving engine featuring PagedAttention and continuous batching. |
+| **[Dask](https://github.com/dask/dask)** | [![Stars](https://img.shields.io/github/stars/dask/dask?style=social&color=white)](https://github.com/dask/dask/stargazers) | Flexible library for parallel and distributed computing in Python, seamlessly scaling NumPy, Pandas, and Scikit-Learn workflows. |
+
+### 2. Serverless & FaaS Frameworks
+
+| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| :--- | :--- | :--- |
+| **[OpenFaaS](https://github.com/openfaas/faas)** | [![Stars](https://img.shields.io/github/stars/openfaas/faas?style=social&color=white)](https://github.com/openfaas/faas/stargazers) | Cloud-native serverless framework to deploy event-driven functions and microservices with Docker and Kubernetes. |
+| **[Fission](https://github.com/fission/fission)** | [![Stars](https://img.shields.io/github/stars/fission/fission?style=social&color=white)](https://github.com/fission/fission/stargazers) | Fast, Kubernetes-native serverless framework with warm container pools achieving ~100ms cold starts across multiple runtimes. |
+| **[Knative Serving](https://github.com/knative/serving)** | [![Stars](https://img.shields.io/github/stars/knative/serving?style=social&color=white)](https://github.com/knative/serving/stargazers) | Kubernetes-based platform providing request-driven auto-scaling (including scale-to-zero), traffic routing, and revisions. |
+| **[Self-Hosted Serverless](https://github.com/mstgnz/self-hosted-serverless)** | [![Stars](https://img.shields.io/github/stars/mstgnz/self-hosted-serverless?style=social&color=white)](https://github.com/mstgnz/self-hosted-serverless/stargazers) | Lightweight, self-hostable Go-based FaaS supporting WebAssembly (WASI via wazero) and Go plugins with built-in metrics and rate limits. |
+
+### 3. Container & Workload Orchestrators
+
+| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| :--- | :--- | :--- |
+| **[Kubernetes](https://github.com/kubernetes/kubernetes)** | [![Stars](https://img.shields.io/github/stars/kubernetes/kubernetes?style=social&color=white)](https://github.com/kubernetes/kubernetes/stargazers) | Industry standard container orchestration system for automating deployment, elastic scaling, and containerized management. |
+| **[Nomad](https://github.com/hashicorp/nomad)** | [![Stars](https://img.shields.io/github/stars/hashicorp/nomad?style=social&color=white)](https://github.com/hashicorp/nomad/stargazers) | Flexible, lightweight workload orchestrator to deploy and manage containers, non-containerized legacy apps, and batch jobs at scale. |
+
+### 4. Cloud Infrastructure, MicroVMs & Virtualization
+
+| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| :--- | :--- | :--- |
+| **[Firecracker](https://github.com/firecracker-microvm/firecracker)** | [![Stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers) | Open-source minimalist Virtual Machine Monitor (VMM) using KVM to create secure, ultra-fast microVMs powering modern serverless. |
+| **[KubeVirt](https://github.com/kubevirt/kubevirt)** | [![Stars](https://img.shields.io/github/stars/kubevirt/kubevirt?style=social&color=white)](https://github.com/kubevirt/kubevirt/stargazers) | Kubernetes virtualization add-on enabling declarative management and scheduling of traditional VMs alongside containers. |
+| **[OpenStack Nova](https://github.com/openstack/nova)** | [![Stars](https://img.shields.io/github/stars/openstack/nova?style=social&color=white)](https://github.com/openstack/nova/stargazers) | Cloud computing fabric controller providing on-demand, massively scalable virtual machine and bare-metal provisioning for IaaS. |
+| **[Apache CloudStack](https://github.com/apache/cloudstack)** | [![Stars](https://img.shields.io/github/stars/apache/cloudstack?style=social&color=white)](https://github.com/apache/cloudstack/stargazers) | Turnkey open-source IaaS software for deploying and managing high-availability public and private compute clouds. |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions, suggestions, and corrections are welcome! 🚀
+
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive feature branch (`git checkout -b feature/add-compute-engine`).
+3. 📝 Update `README.md` following the exact tabular format:
+   - For **SaaS**: include verified pricing, specific free tier limits, and verifiable valuation/revenue.
+   - For **Open-Source**: include GitHub star badge linking to the `/stargazers` page, and maintain sorting order.
+4. 🚀 Push changes and open a pull request!
+
+---
+
+## ⚖️ Disclaimer
+
+- This repository is a **community-curated index** and does not constitute commercial endorsement or financial advice.
+- Cloud compute instances and high-performance GPU resources incur real-time costs. Always verify provider billing schedules, configure strict spending quotas, and implement auto-shutdown policies.
+- Project stars, market valuations, and pricing tiers reflect verified estimates and vendor schedules as of October 2026.
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ for platform architects, cloud engineers, DevOps practitioners, and distributed systems builders.</sub>
+</p>

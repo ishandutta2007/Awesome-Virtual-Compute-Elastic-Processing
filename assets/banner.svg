@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5" />
+      <circle cx="40" cy="0" r="1.5" fill="#38bdf8" fill-opacity="0.2" />
+    </pattern>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        fill: #ffffff;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        fill: #94a3b8;
+        letter-spacing: 0.2px;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+      .stat-label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        fill: #64748b;
+      }
+      .stat-val {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        fill: #f1f5f9;
+      }
+      .pulse-circle {
+        animation: pulse 3s ease-in-out infinite alternate;
+      }
+      .wave-path {
+        animation: flow 8s linear infinite;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.3; transform: scale(0.98); }
+        100% { opacity: 0.7; transform: scale(1.02); }
+      }
+      @keyframes flow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -120; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+  <rect width="1200" height="360" fill="url(#grid)" />
+
+  <!-- Dynamic / Animated Waves & Nodes in Background -->
+  <g opacity="0.6">
+    <circle cx="150" cy="180" r="160" fill="#0284c7" opacity="0.12" filter="blur(40px)" />
+    <circle cx="1050" cy="180" r="180" fill="#7c3aed" opacity="0.14" filter="blur(50px)" />
+    <circle cx="600" cy="280" r="120" fill="#06b6d4" opacity="0.08" filter="blur(30px)" />
+
+    <!-- Animated Data Flow Lines -->
+    <path d="M 0 300 Q 300 240, 600 300 T 1200 280" fill="none" stroke="url(#accentGrad)" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="10 8" class="wave-path" />
+    <path d="M 0 320 Q 350 350, 700 310 T 1200 320" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 6" class="wave-path" style="animation-duration: 6s;" />
+
+    <!-- Floating Elastic Compute Nodes -->
+    <g class="pulse-circle" style="transform-origin: 1050px 100px;">
+      <rect x="980" y="60" width="140" height="70" rx="10" fill="#1e293b" fill-opacity="0.7" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" />
+      <circle cx="1005" cy="85" r="5" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="1020" y="89" font-family="sans-serif" font-size="12" fill="#94a3b8" font-weight="600">Auto-Scale Node</text>
+      <text x="1005" y="112" font-family="sans-serif" font-size="11" fill="#38bdf8">0 → 1,000+ Pods</text>
+    </g>
+
+    <g class="pulse-circle" style="transform-origin: 1020px 220px; animation-delay: 1.5s;">
+      <rect x="940" y="180" width="160" height="70" rx="10" fill="#1e293b" fill-opacity="0.7" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1.5" />
+      <circle cx="965" cy="205" r="5" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <text x="980" y="209" font-family="sans-serif" font-size="12" fill="#94a3b8" font-weight="600">Elastic GPU Pool</text>
+      <text x="965" y="232" font-family="sans-serif" font-size="11" fill="#818cf8">Per-Second Billing</text>
+    </g>
+
+    <g class="pulse-circle" style="transform-origin: 120px 80px; animation-delay: 0.8s;">
+      <rect x="70" y="60" width="130" height="60" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#0284c7" stroke-opacity="0.3" stroke-width="1.2" />
+      <circle cx="90" cy="85" r="4" fill="#38bdf8" />
+      <text x="102" y="89" font-family="sans-serif" font-size="11" fill="#cbd5e1" font-weight="600">MicroVM / FaaS</text>
+      <text x="90" y="105" font-family="sans-serif" font-size="10" fill="#64748b">100ms Cold Start</text>
+    </g>
+  </g>
+
+  <!-- Foreground Main Content (Always visible and crisp) -->
+  <g transform="translate(80, 0)">
+    <!-- Pill Badge -->
+    <g transform="translate(0, 55)">
+      <rect width="280" height="28" rx="14" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1" />
+      <circle cx="16" cy="14" r="4" fill="#38bdf8">
+        <animate attributeName="r" values="3.5;4.5;3.5" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="28" y="19" class="badge-text">⚡ ELASTIC CLOUD &amp; SERVERLESS</text>
+    </g>
+
+    <!-- Title -->
+    <text x="0" y="135" class="title-text">
+      Awesome Virtual Compute
+    </text>
+    <text x="0" y="180" class="title-text" fill="url(#accentGrad)">
+      &amp; Elastic Processing
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="222" class="subtitle-text">
+      Curated directory of elastic compute, serverless FaaS, GPU clusters &amp; distributed engines.
+    </text>
+
+    <!-- Bottom Feature Badges / Highlights -->
+    <g transform="translate(0, 260)">
+      <!-- Item 1 -->
+      <g>
+        <rect width="180" height="52" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="16" y="22" class="stat-label">MARKET SIZE (2026)</text>
+        <text x="16" y="42" class="stat-val">📊 $130B+ Cloud Compute</text>
+      </g>
+      <!-- Item 2 -->
+      <g transform="translate(195, 0)">
+        <rect width="190" height="52" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="16" y="22" class="stat-label">ARCHITECTURE DYNAMICS</text>
+        <text x="16" y="42" class="stat-val">🚀 MicroVMs &amp; Serverless</text>
+      </g>
+      <!-- Item 3 -->
+      <g transform="translate(400, 0)">
+        <rect width="180" height="52" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="16" y="22" class="stat-label">GPU WORKLOADS</text>
+        <text x="16" y="42" class="stat-val">⚡ Per-Second Scale</text>
+      </g>
+    </g>
+  </g>
+</svg>
