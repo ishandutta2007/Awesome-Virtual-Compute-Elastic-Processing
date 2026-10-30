@@ -8,7 +8,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Track Awesome List](https://img.shields.io/badge/list-awesome-blueviolet.svg?style=flat-square)](https://github.com/topics/awesome-list)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing?style=social)](https://github.com/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing/stargazers)
+[![GitHub_Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing?style=social)](https://github.com/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing/stargazers)
 <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 > **Curated list of top SaaS products, enterprise platforms, and open-source GitHub frameworks for Virtual Compute, Elastic Infrastructure, Serverless Processing, and Distributed Cloud Orchestration.**
@@ -73,11 +73,11 @@ The table below is sorted by **Company Size / Valuation (Descending)**:
 
 ## 💻 Open-Source GitHub Projects
 
-Curated list of leading open-source compute frameworks and distributed engines, **sorted strictly by GitHub Stars (Descending)**:
+Curated list of leading open-source compute frameworks and distributed engines, **sorted strictly by GitHub_Stars (Descending)**:
 
 ### 1. Distributed Compute & Processing Engines
 
-| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| Repository 📦 | GitHub_Stars ⭐ | Primary Focus & Capabilities 🛠️ |
 | :--- | :--- | :--- |
 | **[Apache Spark](https://github.com/apache/spark)** | [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) | Unified analytics engine for large-scale distributed data processing, streaming, SQL, and machine learning pipelines. |
 | **[Ray](https://github.com/ray-project/ray)** | [![Stars](https://img.shields.io/github/stars/ray-project/ray?style=social&color=white)](https://github.com/ray-project/ray/stargazers) | Universal distributed compute engine for scaling Python, AI training, and fine-grained hardware scheduling across CPUs/GPUs/TPUs. |
@@ -86,7 +86,7 @@ Curated list of leading open-source compute frameworks and distributed engines, 
 
 ### 2. Serverless & FaaS Frameworks
 
-| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| Repository 📦 | GitHub_Stars ⭐ | Primary Focus & Capabilities 🛠️ |
 | :--- | :--- | :--- |
 | **[OpenFaaS](https://github.com/openfaas/faas)** | [![Stars](https://img.shields.io/github/stars/openfaas/faas?style=social&color=white)](https://github.com/openfaas/faas/stargazers) | Cloud-native serverless framework to deploy event-driven functions and microservices with Docker and Kubernetes. |
 | **[Fission](https://github.com/fission/fission)** | [![Stars](https://img.shields.io/github/stars/fission/fission?style=social&color=white)](https://github.com/fission/fission/stargazers) | Fast, Kubernetes-native serverless framework with warm container pools achieving ~100ms cold starts across multiple runtimes. |
@@ -95,14 +95,14 @@ Curated list of leading open-source compute frameworks and distributed engines, 
 
 ### 3. Container & Workload Orchestrators
 
-| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| Repository 📦 | GitHub_Stars ⭐ | Primary Focus & Capabilities 🛠️ |
 | :--- | :--- | :--- |
 | **[Kubernetes](https://github.com/kubernetes/kubernetes)** | [![Stars](https://img.shields.io/github/stars/kubernetes/kubernetes?style=social&color=white)](https://github.com/kubernetes/kubernetes/stargazers) | Industry standard container orchestration system for automating deployment, elastic scaling, and containerized management. |
 | **[Nomad](https://github.com/hashicorp/nomad)** | [![Stars](https://img.shields.io/github/stars/hashicorp/nomad?style=social&color=white)](https://github.com/hashicorp/nomad/stargazers) | Flexible, lightweight workload orchestrator to deploy and manage containers, non-containerized legacy apps, and batch jobs at scale. |
 
 ### 4. Cloud Infrastructure, MicroVMs & Virtualization
 
-| Repository 📦 | Stars ⭐ | Primary Focus & Capabilities 🛠️ |
+| Repository 📦 | GitHub_Stars ⭐ | Primary Focus & Capabilities 🛠️ |
 | :--- | :--- | :--- |
 | **[Firecracker](https://github.com/firecracker-microvm/firecracker)** | [![Stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers) | Open-source minimalist Virtual Machine Monitor (VMM) using KVM to create secure, ultra-fast microVMs powering modern serverless. |
 | **[KubeVirt](https://github.com/kubevirt/kubevirt)** | [![Stars](https://img.shields.io/github/stars/kubevirt/kubevirt?style=social&color=white)](https://github.com/kubevirt/kubevirt/stargazers) | Kubernetes virtualization add-on enabling declarative management and scheduling of traditional VMs alongside containers. |
@@ -119,7 +119,7 @@ Contributions, suggestions, and corrections are welcome! 🚀
 2. 🌿 Create a descriptive feature branch (`git checkout -b feature/add-compute-engine`).
 3. 📝 Update `README.md` following the exact tabular format:
    - For **SaaS**: include verified pricing, specific free tier limits, and verifiable valuation/revenue.
-   - For **Open-Source**: include GitHub star badge linking to the `/stargazers` page, and maintain sorting order.
+   - For **Open-Source**: include GitHub Stars_Badge linking to the `/stargazers` page, and maintain sorting order.
 4. 🚀 Push changes and open a pull request!
 
 ---
