@@ -4,10 +4,12 @@
 
 # ⚡ Awesome Virtual Compute & Elastic Processing 🚀
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Track Awesome List](https://img.shields.io/badge/list-awesome-blueviolet.svg?style=flat-square)](https://github.com/topics/awesome-list)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing?style=social)](https://github.com/ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing/stargazers)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 > **Curated list of top SaaS products, enterprise platforms, and open-source GitHub frameworks for Virtual Compute, Elastic Infrastructure, Serverless Processing, and Distributed Cloud Orchestration.**
 
@@ -25,6 +27,8 @@
   - [Container & Workload Orchestrators](#3-container--workload-orchestrators)
   - [Cloud Infrastructure, MicroVMs & Virtualization](#4-cloud-infrastructure-microvms--virtualization)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
+- [💖 Support](#-support)
 - [⚖️ Disclaimer](#-disclaimer)
 
 ---
@@ -117,6 +121,22 @@ Contributions, suggestions, and corrections are welcome! 🚀
    - For **SaaS**: include verified pricing, specific free tier limits, and verifiable valuation/revenue.
    - For **Open-Source**: include GitHub star badge linking to the `/stargazers` page, and maintain sorting order.
 4. 🚀 Push changes and open a pull request!
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Virtual-Compute-Elastic-Processing&type=date&legend=top-left)
+
+---
+
+## 💖 Support
+
+Thank you for exploring and using this curated directory! If you found this repository helpful, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub to help others discover it.
+- 🍴 **Fork** and contribute new tools or updates.
+- 📢 **Share** it with fellow platform architects, developers, and DevOps communities.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support continued maintenance and curation of open-source tooling, consider sponsoring via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
 
 ---
 
